@@ -1,0 +1,263 @@
+:root {
+  --noite: #22121f;
+  --noite-2: #2f1a2b;
+  --rosa: #ef8aa0;
+  --rosa-suave: #f7d3dc;
+  --papel: #fbeff1;
+  --tinta: #4a2a3a;
+  --texto: #f6e8ec;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --mao: "Caveat", cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(60rem 40rem at 50% -10%, #4a2140 0%, transparent 70%),
+    var(--noite);
+  color: var(--texto);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+/* ---------- Início ---------- */
+.hero {
+  min-height: 78vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+  animation: entrar 1.4s ease both;
+}
+
+.hero__small {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--rosa-suave);
+}
+
+.hero__name {
+  margin: 0.2em 0 0.3em;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(3.5rem, 14vw, 9rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--rosa);
+}
+
+.hero__count {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--rosa-suave);
+  opacity: 0.85;
+}
+
+.hero__count span {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.3em;
+  color: var(--texto);
+}
+
+@keyframes entrar {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Cartinha ---------- */
+.carta {
+  padding: 0 1.25rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.carta__papel {
+  width: 100%;
+  max-width: 40rem;
+  background: var(--papel);
+  color: var(--tinta);
+  border-radius: 6px 6px 28px 6px;
+  padding: clamp(1.75rem, 6vw, 3.5rem);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.55);
+  transform: rotate(-0.8deg);
+}
+
+.carta__titulo {
+  margin: 0 0 1.5rem;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.carta__papel p {
+  margin: 0 0 1.1rem;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  max-width: 34rem;
+}
+
+.carta__papel .carta__assinatura {
+  margin: 2rem 0 0;
+  font-family: var(--mao);
+  font-weight: 600;
+  font-size: 2rem;
+  color: #c4455f;
+  text-align: right;
+}
+
+/* ---------- Linha do tempo ---------- */
+.memorias {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.memorias__titulo {
+  margin: 0 0 3rem;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  color: var(--rosa);
+}
+
+.linha {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* fio central */
+.linha::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--rosa) 8%, var(--rosa) 92%, transparent);
+  opacity: 0.5;
+}
+
+.momento {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 4.5rem;
+}
+
+/* coração no fio */
+.momento::after {
+  content: "♥";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--noite);
+  color: var(--rosa);
+  font-size: 0.9rem;
+  border: 1px solid var(--rosa);
+}
+
+.momento__foto {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px 18px 18px;
+  overflow: hidden;
+  background: var(--noite-2);
+  box-shadow: 0 24px 50px -22px rgba(0, 0, 0, 0.7);
+}
+
+.momento__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.momento__texto time {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--rosa);
+}
+
+.momento__texto h3 {
+  margin: 0.2em 0 0.4em;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.momento__texto p {
+  margin: 0;
+  max-width: 24rem;
+  color: var(--rosa-suave);
+  opacity: 0.9;
+}
+
+/* alterna os lados */
+.momento:nth-child(even) .momento__foto { order: 2; }
+.momento:nth-child(even) .momento__texto { order: 1; text-align: right; justify-self: end; }
+.momento:nth-child(even) .momento__texto p { margin-left: auto; }
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  padding: 3rem 1.5rem 5rem;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: var(--rosa-suave);
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 720px) {
+  .linha::before { left: 1rem; }
+
+  .momento {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-left: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .momento::after { left: 1rem; top: 1rem; }
+
+  .momento:nth-child(even) .momento__foto { order: 0; }
+  .momento:nth-child(even) .momento__texto {
+    order: 0; text-align: left; justify-self: start;
+  }
+  .momento:nth-child(even) .momento__texto p { margin-left: 0; }
+
+  .carta__papel { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero { animation: none; }
+  html { scroll-behavior: auto; }
+}

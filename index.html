@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Para você, com amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&family=Caveat:wght@600&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- INÍCIO -->
+  <header class="hero">
+    <p class="hero__small">para</p>
+    <!-- TROCA pelo nome dela -->
+    <h1 class="hero__name">Kimberly</h1>
+    <p class="hero__count">
+      <span id="dias">365</span> dias juntos e contando
+    </p>
+  </header>
+
+  <!-- CARTINHA -->
+  <main>
+    <section class="carta" aria-labelledby="carta-titulo">
+      <article class="carta__papel">
+        <h2 id="carta-titulo" class="carta__titulo">Minha cartinha pra você</h2>
+
+        <!-- ESCREVE A CARTA AQUI: cada <p> é um parágrafo -->
+        <p>Meu amorzão,</p>
+        <p> Venho para te dar uma informação:
+          vamos fazer um anozão!
+        </p>
+        <p>Mas peraí, não chore ainda,
+          pois tenho mais uma surpresa:
+          nossas fotos lindas.
+        </p>
+        <p>E, para terminar essa rima,
+            vou te falar mais uma coisa:
+            vou te amar a vida inteira.
+        </p>
+
+        <p class="carta__assinatura">gabriel</p>
+      </article>
+    </section>
+
+    <!-- LINHA DO TEMPO DE FOTOS -->
+    <section class="memorias" aria-labelledby="memorias-titulo">
+      <h2 id="memorias-titulo" class="memorias__titulo">Nossos melhores momentos</h2>
+
+      <ol class="linha">
+
+        <!-- COPIA E COLA ESTE BLOCO <li> PARA CADA FOTO -->
+        <li class="momento">
+          <figure class="momento__foto">
+            <img src="fotos/foto1.png" alt="Descreva a foto" loading="lazy">
+          </figure>
+          <div class="momento__texto">
+            <time datetime="2024-01-15">muito tempo a traz</time>
+            <h3>Nos novinhos</h3>
+            <p></p>
+          </div>
+        </li>
+
+        <li class="momento">
+          <figure class="momento__foto">
+            <img src="fotos/foto2.jpg" alt="Descreva a foto" loading="lazy">
+          </figure>
+          <div class="momento__texto">
+            <time datetime="2024-03-10">Aula de quimica</time>
+            <h3>foto hasterick</h3>
+            <p>Umas das primeira fotos nossas.</p>
+          </div>
+        </li>
+
+        <li class="momento">
+          <figure class="momento__foto">
+            <img src="fotos/foto3.jpg" alt="Descreva a foto" loading="lazy">
+          </figure>
+          <div class="momento__texto">
+            <time datetime="2024-07-02">dia de chuva</time>
+            <h3>Minha gatinha</h3>
+            <p>Fotos aonde tu fica mais gatinha possivel.</p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>E ainda tem muitos mais anos pela frente.</p>
+  </footer>
+
+</body>
+
+</html>
